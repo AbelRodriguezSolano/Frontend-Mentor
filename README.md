@@ -1,6 +1,6 @@
 # Frontend-Mentor
 
-This are some challenges from Frontend Mentor. This group of project are built with HTML, CSS and JavaScript. The purpose of this repository for showing my skills as a frontend developer.
+These are some challenges from Frontend Mentor. This group of project are built with HTML, CSS and JavaScript. The purpose of this repository for showing my skills as a frontend developer.
 
 ## JS-Form-Validations
 [![JS-Form-Validations.jpg](https://i.postimg.cc/FKvC2WMr/JS-Form-Validations.jpg)](https://postimg.cc/mPdS9wZJ)
