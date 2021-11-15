@@ -1,0 +1,131 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --White: #fff;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/bg-intro-mobile.png");
+  font-family: var(--font-family);
+  background-color: var(--Red);
+  display: grid;
+}
+
+@media screen and (min-width: 368px) {
+  body {
+    place-items: center;
+    background-image: url("/assets/images/bg-intro-desktop.png");
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.header,
+.aside {
+  text-align: center;
+  color: var(--White);
+}
+
+@media screen and (min-width: 368px) {
+  .header {
+    text-align: left;
+    margin-left: 100px;
+  }
+  .header__title {
+    font-size: 50px;
+  }
+}
+.header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.aside {
+  background-color: var(--Blue);
+  padding: 15px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+.form {
+  padding: 15px 0;
+  border-radius: 10px;
+  background-color: var(--White);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.form__field,
+.form__btn {
+  width: 90%;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.form__input {
+  width: 90%;
+  padding: 10px 10px;
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Dark-Blue);
+}
+.form__button {
+  width: 90%;
+  background-color: var(--Green);
+  padding: 20px 5px;
+  border: none;
+  color: var(--White);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 368px) {
+  .form {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+}
+.form__terms {
+  color: var(--Grayish-Blue);
+  margin: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+}
+.form__terms--red {
+  color: var(--Red);
+}
+
+/* Validaciones */
+
+.data__error {
+  color: var(--Red);
+  font-size: 12px;
+  padding: 0;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+  display: none;
+  margin-bottom: 5px;
+}
+
+.data__error--error {
+  display: block;
+}
+.data__error::after {
+  content: url("/assets/images/icon-error.svg");
+  position: absolute;
+  right: 10px;
+  top: -32px;
+}
+.form__input--error {
+  border: 1px solid var(--Red);
+}

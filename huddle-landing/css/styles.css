@@ -1,0 +1,119 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --White: #fff;
+  --First-font-family: "Poppins", sans-serif;
+  --Second-font-family: "Open Sans", sans-serif;
+}
+
+body {
+  color: var(--White);
+  background-color: var(--Violet);
+  background-image: url("/assets/images/bg-mobile.svg");
+  font-family: var(--First-font-family);
+  font-weight: 400;
+  padding: 20px;
+  display: grid;
+}
+@media screen and (min-width: 368px) {
+  body {
+    background-image: url("/assets/images/bg-desktop.svg");
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+.header {
+  margin-top: 20px;
+}
+@media screen and (min-width: 368px) {
+  .header {
+    grid-row: 1 span;
+    grid-column: 1/3;
+    display: flex;
+  }
+}
+.logo {
+  width: 150px;
+}
+@media screen and (min-width: 368px) {
+}
+.banner {
+  margin-top: 50px;
+}
+.register {
+  text-align: center;
+  margin-top: 50px;
+}
+.register__title {
+  font-family: var(--First-font-family);
+  font-weight: 600;
+}
+@media screen and (min-width: 368px) {
+  .banner {
+    margin-top: 0;
+  }
+  .register {
+    text-align: left;
+    margin-left: 40px;
+  }
+  .register__title {
+    font-size: 50px;
+  }
+}
+.register__link {
+  margin-top: 25px;
+  display: inline-block;
+  color: var(--Violet);
+  text-decoration: none;
+  background-color: var(--White);
+  width: 150px;
+  padding: 7px 10px;
+  border-radius: 30px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 368px) {
+  .register__link {
+    text-align: center;
+  }
+  .register__link:hover {
+    color: var(--White);
+    background-color: var(--Soft-Magenta);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  }
+  .footer {
+    grid-column: 2;
+    justify-content: flex-end;
+  }
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+.footer__link {
+  margin: 0 5px;
+  color: var(--White);
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+@media screen and (min-width: 368px) {
+  .footer__list {
+    margin-top: 10px;
+    align-items: flex-end;
+  }
+  .footer__link:hover {
+    color: var(--Soft-Magenta);
+    border: 2px solid var(--Soft-Magenta);
+  }
+}

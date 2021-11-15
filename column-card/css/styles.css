@@ -1,0 +1,62 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --Font-family-primary: "Big Shoulders Display", cursive;
+  --Font-family-secundary: "Lexend Deca", sans-serif;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cards {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+}
+
+@media screen and (min-width: 368px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    width: 800px;
+  }
+}
+.card {
+  padding: 50px 40px;
+  margin-bottom: 0;
+}
+.card:first-child {
+  background-color: var(--Bright-orange);
+}
+.card:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.card:last-child {
+  background-color: var(--Very-dark-cyan);
+}
+.card__title {
+  color: var(--Very-light-gray);
+  font-size: 50px;
+  font-family: var(--Font-family-primary);
+}
+
+.card__text {
+  color: var(--Transparent-white);
+  font-family: var(--Font-family-secundary);
+}
+.card__link {
+  text-decoration: none;
+  background-color: var(--Very-light-gray);
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: var(--Font-family-secundary);
+  color: var(--Dark-cyan);
+}

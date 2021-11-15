@@ -1,0 +1,104 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Primary-Font: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--Primary-Font);
+  background-color: var(--Very-Light-Gray);
+  min-height: 100vh;
+  /* display: grid;
+  place-items: center; */
+}
+.header {
+  text-align: center;
+}
+.header__title {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 75px;
+  color: var(--Very-Dark-Blue);
+}
+.header__title--bold {
+  font-weight: 600;
+}
+.header__text {
+  color: var(--Grayish-Blue);
+}
+
+.cards {
+  display: grid;
+  margin: 0 15px;
+  margin-top: 50px;
+}
+
+.card {
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.card__header {
+  margin: 5px 10px 10px;
+}
+.card:first-child {
+  border-top: solid 8px var(--Cyan);
+}
+.card:nth-child(2) {
+  border-top: solid 8px var(--Red);
+}
+.card:nth-child(3) {
+  border-top: solid 8px var(--Orange);
+}
+.card:last-child {
+  border-top: solid 8px var(--Blue);
+}
+.card__text {
+  color: var(--Grayish-Blue);
+}
+.card__image {
+  position: absolute;
+  right: 20px;
+}
+@media screen and (min-width: 800px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 600px;
+  }
+  .header {
+    grid-column: 1/4;
+  }
+  .cards {
+    grid-column: 1/4;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 600px;
+  }
+  .card {
+    width: 350px;
+  }
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  .card:nth-child(3) {
+    align-self: flex-end;
+  }
+  .card:last-child {
+    grid-column: 3/4;
+    grid-row: 1;
+  }
+  .card:first-child,
+  .card:last-child {
+    align-self: center;
+  }
+}

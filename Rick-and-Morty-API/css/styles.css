@@ -1,0 +1,12 @@
+/* body {
+  background-color: red;
+} */
+
+.image {
+  width: 200px;
+  border-radius: 60px;
+}
+.select {
+  display: inline;
+  width: 100px;
+}

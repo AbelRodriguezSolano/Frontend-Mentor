@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Component</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Learn to code by watching others</h1>
+      <p class="header__text">
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </p>
+    </header>
+    <div class="desktop__responsive">
+      <aside class="aside">
+        <p class="aside__text">
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </p>
+      </aside>
+      <main class="main">
+        <form action="#" class="form">
+          <div class="form__field" data-error="First Name cannot be empty">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              class="form__input"
+              id="firstName"
+            />
+            <span class="data__error" id="data__error"
+              >First Name cannot be empty</span
+            >
+          </div>
+          <div class="form__field" data-error="Last Name cannot be empty">
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              class="form__input"
+            />
+          </div>
+          <div class="form__field" data-error="Looks like this is not an email">
+            <input
+              type="email"
+              name="emailAddress"
+              placeholder="Email Address"
+              class="form__input"
+            />
+          </div>
+          <div class="form__field" data-error="Password cannot be empty">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="form__input"
+            />
+          </div>
+          <div class="form__btn">
+            <input
+              type="button"
+              value="Claim your free trial"
+              class="form__button"
+              id="btn"
+            />
+          </div>
+          <p class="form__terms">
+            By clicking the button, you are agreeing to our
+            <strong class="form__terms--red">Terms and Services </strong>
+          </p>
+        </form>
+      </main>
+    </div>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
